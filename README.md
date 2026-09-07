@@ -6,5 +6,5 @@ Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-start
 - [Is it Christmas?](https://isitchristmas.com)
 - [Am i Faker](https://op.gg/da/lol/summoners/euw/næhh-næhh)
 ## Formatting Examples:
-1. *Italic* tekst.
-2. **Bold** Tekst.
+1. *Italic* tekst emphasis.
+2. **Bold** Tekst emphasis.
