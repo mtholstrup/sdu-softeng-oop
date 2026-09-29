@@ -67,3 +67,26 @@ for(int courseid = 0; courseid < grades.Length; courseid++) {
 }
 
 Console.WriteLine("Average grade is " + ((double)sum / count));
+
+
+// 9.3 but a foreach loop
+int GetGrade2 (int grade) {;
+    if (grade >= 02) {
+        return grade;
+    } else {
+        throw new Exception();
+    }
+}
+
+int count2 = 0;
+int sum2 = 0;
+
+foreach(int grade in grades) {
+    try {
+        sum2 += GetGrade2(grade);
+        count2++;
+    } catch (Exception) {
+    }
+}
+
+Console.WriteLine("Average grade is " + ((double)sum2 / count2));
