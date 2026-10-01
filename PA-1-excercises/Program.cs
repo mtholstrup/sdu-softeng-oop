@@ -30,15 +30,15 @@ Console.WriteLine("");
 // to reduce number of observations i would probably look at index 4,9,19 where we can easily know what the value should be.
 
 //7.13 - Calendar Prettyprinting
-/*
+
 string[] days = {
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday",
-    "saturday",
-    "sunday"
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    "sun"
 };
 
 string[] month = {
@@ -59,6 +59,20 @@ string[] month = {
 int[] daysMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
 int[] daysLeap = [31,29,31,30,31,30,31,31,30,31,30,31];
 
+for (int i = 0; i<month.Length; i++) {
+    Console.WriteLine(month[i]);
+    for (int j = 0; j<days.Length; j++) {
+        Console.Write(days[j] + " ");
+    }
+    Console.WriteLine("");
+    for (int k = 0; k<daysMonth; k++) {
+        if (k%7==0) {
+            Console.WriteLine("");
+        }
+        Console.Write(daysMonth[i]);
+    }
+}
+/*
 int year = 2019;
 
 bool leap = (i%4==0);
