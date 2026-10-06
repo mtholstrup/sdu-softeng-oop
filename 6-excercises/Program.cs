@@ -6,6 +6,14 @@ for (double i=-5; i <= 40; i += 0.5) {
     Console.WriteLine("Fahrenheit: "+tF+" Celsius: "+i);
 }
 
+// 6.8 - Celsius to Fahrenheit Alternatives
+int h = -5;
+while (h<=40) {
+    double tF = 32 + 9/5*h;
+    Console.WriteLine("Fahrenheit: "+tF+" Celsius: "+h); 
+    h++;
+}
+
 
 // 6.3 Christmas Sale
 
