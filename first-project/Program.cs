@@ -22,7 +22,8 @@ class Program
         Parrot parrot2 = new Parrot("Jack");
         Parrot parrot3 = new Parrot("Beak");
         Console.WriteLine(parrot1.GetName());
-
         parrot1.SetBestFriend(parrot2);
+
+        Animal animal1 = new Animal("Beast");
     }
 }
