@@ -1,15 +1,12 @@
 public class FoodItem : Item {
-    private string _name;
-    private double _price;
     private DateTime expiresAt;
 
+    //constructor
     public FoodItem(string name, double price, DateTime expiry) : base(name, price)  {
-        _name = name;
-        _price = price;
         expiresAt = expiry;
-        Console.WriteLine("fooditem");
     }
 
+    //DateTime Getter
     public DateTime GetExpiresAt() {
         return expiresAt;
     }
@@ -18,4 +15,3 @@ public class FoodItem : Item {
         return ($"Name: {this.GetName()}, Price: {this.GetPrice()}$, Expires at {this.GetExpiresAt()}");
     }
 }
-        

@@ -5,7 +5,6 @@ public class Item {
     public Item (string name, double price) {
         _name = name;
         _price = price;
-        Console.WriteLine("item");
     }
 
     public string GetName() {
@@ -16,4 +15,3 @@ public class Item {
         return this._price;
     }
 }
-
