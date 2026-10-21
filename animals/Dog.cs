@@ -7,7 +7,7 @@ public class Dog : Animal{
         return $"{base.GetDescription()}. Dogs go bark bark";
     }
 
-    public override string MakeSound() {
+    public sealed override string MakeSound() {
         return "Bark Bark";
     }
 
