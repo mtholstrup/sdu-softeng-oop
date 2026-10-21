@@ -1,4 +1,4 @@
-﻿namespace animals;
+﻿namespace _animals;
 
 class Program
 {
