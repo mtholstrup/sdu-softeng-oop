@@ -1,4 +1,4 @@
-public class Animal {
+public abstract class Animal {
     private string _name;
     private Animal _bestfriend;
     private static List<Animal> _animalList = new List<Animal>();

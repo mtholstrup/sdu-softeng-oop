@@ -25,16 +25,10 @@ class Program
         Console.WriteLine(parrot1.GetName());
         parrot1.SetBestFriend(parrot2);
 
-        Animal animal1 = new Animal("Beast");
-
-        foreach(Animal animal in Animal.GetList()) {
-            Console.WriteLine(animal.MakeSound());
-        }
-
         dog2.SetBestFriend(parrot1);
         Console.WriteLine(dog1.GetDescription());
         Console.WriteLine(parrot1.GetDescription());
-        Console.WriteLine(animal1.GetDescription());
+
         Console.WriteLine(Animal.GetCountByType(typeof(Dog)));
         Console.WriteLine(Animal.GetCountByType(typeof(Parrot)));
         Console.WriteLine(Animal.GetCount());
