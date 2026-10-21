@@ -7,4 +7,8 @@ public class Whale : Animal {
     public override string GetDescription() {
         throw new NotImplementedException();
     }
+
+    public override string MakeSound() {
+        return "Splash Splash";
+    }
 }

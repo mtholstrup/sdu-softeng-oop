@@ -63,7 +63,5 @@ public abstract class Animal {
         return "Animals are cool";
     }
 
-    public virtual string MakeSound() {
-        return "Stomp Stomp";
-    }
+    public abstract string MakeSound();
 }

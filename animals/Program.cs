@@ -8,6 +8,9 @@ class Program
         Dog dog2 = new Dog("Ruff");
         Dog dog3 = new Dog("Scruff");
         Dog dog4 = new Dog("Tuff");
+
+        Rottweiler rott1 = new Rottweiler ("Jeff");
+        
         Console.WriteLine(dog1.GetName());
         
         dog1.SetBestFriend(dog2);
@@ -42,6 +45,10 @@ class Program
         }
 
         foreach(Animal animal in Animal.GetList()) {
+            Console.WriteLine(animal.MakeSound());
+        }
+        
+        foreach(Animal animal in Animal.GetList()) {
             switch (animal) {
                 case Dog dog: {
                     Console.WriteLine(dog.RollAround());
@@ -57,6 +64,5 @@ class Program
             }
         }
 
-        Rottweiler rott1 = new Rottweiler ("Jeff");
     }
 }
