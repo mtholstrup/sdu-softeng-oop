@@ -1,4 +1,4 @@
-public abstract class Animal {
+public abstract class Animal : IMakeSound, IComparable {
     private string _name;
     private Animal _bestfriend;
     private static List<Animal> _animalList = new List<Animal>();
@@ -9,6 +9,15 @@ public abstract class Animal {
         this._name = name;
     }
 
+    public int CompareTo(Object? otherObject) {
+        if (otherObject is Animal otherAnimal) {
+            string x = this.GetName();
+            string y = otherAnimal.GetName();
+            return x.CompareTo(y);
+        }
+        return 0;
+    }
+    
     public static int GetCountByType(Type animalType) {
         int animalCount = 0;
         foreach(Animal animal in _animalList) {
@@ -56,7 +65,7 @@ public abstract class Animal {
         } else {
             friend = "No friend";
         }
-        return $"Name: {this.GetName()} Bestfriend: {friend}";
+        return $"Name: {this.GetName()} Bestfriend: {friend} Type: {this.GetType().Name}";
     }
 
     public virtual string GetDescription() {

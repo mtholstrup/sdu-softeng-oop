@@ -4,12 +4,19 @@ class Program
 {
     static void Main(string[] args)
     {
+        List<IMakeSound> SoundMakers = new List<IMakeSound>();
         Dog dog1 = new Dog("Woof");
         Dog dog2 = new Dog("Ruff");
         Dog dog3 = new Dog("Scruff");
         Dog dog4 = new Dog("Tuff");
 
         Rottweiler rott1 = new Rottweiler ("Jeff");
+
+        Car car1 = new Car();
+
+        SoundMakers.Add(car1);
+        
+        Console.WriteLine(car1.MakeSound());
         
         Console.WriteLine(dog1.GetName());
         
@@ -38,14 +45,21 @@ class Program
 
         Whale whale1 = new Whale("Splash");
 
+        SoundMakers.AddRange(Animal.GetList());
+
+        foreach(IMakeSound soundmaker in SoundMakers) {
+            Console.WriteLine(soundmaker.MakeSound());
+        }
+        
         try {
             whale1.GetDescription();
         } catch (NotImplementedException e) {
             Console.WriteLine("Not implemented yet: " + e.Message);
         }
 
+        Animal.GetList().Sort();
         foreach(Animal animal in Animal.GetList()) {
-            Console.WriteLine(animal.MakeSound());
+            Console.WriteLine(animal);
         }
         
         foreach(Animal animal in Animal.GetList()) {
